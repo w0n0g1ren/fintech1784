@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.example.first.home.HomeActivity
 import com.example.first.home.HomeFragment
 import com.example.first.profile.ProfileActivity
 import com.example.first.profile.ProfileFragment
@@ -26,29 +27,29 @@ class MainActivity : AppCompatActivity() {
 
 
         //panggil activity
-//        button_home.setOnClickListener{
-//            val intent =Intent(this,HomeActivity::class.java)
-//            startActivity(intent)
-//        }
-//        button_profile.setOnClickListener{
-//            val intent= Intent(this, ProfileActivity::class.java)
-//            startActivity(intent)
-//        }
-//        button_settings.setOnClickListener{
-//            val intent= Intent(this, SettingsActivity::class.java)
-//            startActivity(intent)
-//        }
-
-        //panggil fragment
         button_home.setOnClickListener{
-            loadfragment(HomeFragment())
+            val intent =Intent(this,HomeActivity::class.java)
+            startActivity(intent)
         }
         button_profile.setOnClickListener{
-            loadfragment(ProfileFragment())
+            val intent= Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
         }
         button_settings.setOnClickListener{
-            loadfragment(SettingsFragment())
+            val intent= Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
         }
+
+//        //panggil fragment
+//        button_home.setOnClickListener{
+//            loadfragment(HomeFragment())
+//        }
+//        button_profile.setOnClickListener{
+//            loadfragment(ProfileFragment())
+//        }
+//        button_settings.setOnClickListener{
+//            loadfragment(SettingsFragment())
+//        }
     }
 
     //function untuk mengeload fragment
